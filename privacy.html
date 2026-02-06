@@ -14,6 +14,7 @@
       --muted:#6b555d;
       --border:#f1c6d4;
       --shadow: 0 18px 50px rgba(73,32,45,0.10);
+      --shadow2: 0 10px 24px rgba(73,32,45,0.08);
       --radius:22px;
     }
 
@@ -42,6 +43,14 @@
       box-shadow:var(--shadow);
     }
 
+    .header-img{
+      width:100%;
+      border-radius:18px;
+      display:block;
+      box-shadow:var(--shadow2);
+      margin-bottom:18px;
+    }
+
     h1{
       margin-top:0;
       font-size:36px;
@@ -49,14 +58,20 @@
     }
 
     h2{
-      margin-top:28px;
+      margin-top:26px;
       font-size:20px;
+      letter-spacing:-0.1px;
     }
 
-    p{
+    p, li{
       color:var(--muted);
       line-height:1.7;
       font-size:16px;
+    }
+
+    ul{
+      padding-left:18px;
+      margin-top:10px;
     }
 
     a{
@@ -68,68 +83,96 @@
 <body>
   <div class="wrap">
     <div class="card">
+
+      <img class="header-img" src="privacypolicy.jpg" alt="Privacy Policy">
+
       <h1>Privacy Policy</h1>
 
       <p>
-        Your privacy matters. This page explains what information is collected on
-        Relaxing Rosie and how it is used.
+        Relaxing Rosie is a calm, simple website. You can browse without creating an account,
+        and we do not sell your personal information.
+      </p>
+
+      <p>
+        This page explains what data may be collected when you visit, why it is collected,
+        and what choices you have.
       </p>
 
       <h2>Information we collect</h2>
       <p>
-        Relaxing Rosie does not require you to create an account or provide personal
-        information to browse the site.
+        We do not ask you to provide personal information to view this site.
+      </p>
+      <p>
+        Like most websites, limited information may be collected automatically through standard
+        web technologies and third-party services. This may include:
+      </p>
+      <ul>
+        <li>Device and browser information (for example, browser type or screen size)</li>
+        <li>Pages you visit and how long you stay</li>
+        <li>General location information (approximate, not a street address)</li>
+        <li>Referring pages (for example, if you came from YouTube or search)</li>
+      </ul>
+
+      <h2>Cookies and similar technologies</h2>
+      <p>
+        Cookies are small files that help websites function properly, understand traffic,
+        and (if enabled) show ads.
       </p>
 
       <p>
-        Like most websites, basic, non-identifying information may be collected
-        automatically by third-party services such as analytics or advertising
-        platforms. This may include things like browser type, device type, pages
-        visited, and approximate location.
+        Relaxing Rosie may use cookies and similar technologies provided by third parties,
+        including Google, to display advertising and measure performance.
       </p>
 
-      <h2>Cookies and advertising</h2>
+      <h2>Google AdSense and advertising</h2>
       <p>
-        This site may use cookies and similar technologies provided by third-party
-        vendors, including Google, to display ads and measure performance.
+        If advertising is enabled on this site, Google and other third-party vendors may use
+        cookies to serve ads based on your visits to this site and other websites.
       </p>
 
       <p>
-        Google may use cookies (such as the DoubleClick cookie) to serve ads based on
-        your visits to this and other websites. You can learn more about how Google
-        uses data and manage ad personalization by visiting
-        <a href="https://policies.google.com/technologies/ads" target="_blank">
-          Google’s advertising policies
+        You can learn more about how Google uses data and how to manage ad personalization by visiting
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
+          Google’s advertising and cookie information
         </a>.
       </p>
 
-      <h2>How information is used</h2>
+      <h2>How information may be used</h2>
       <p>
-        Any collected information is used to:
+        Information collected through the site may be used to:
       </p>
       <ul>
-        <li>Understand how the site is used</li>
-        <li>Improve content and user experience</li>
-        <li>Support advertising and site maintenance</li>
+        <li>Keep the site running smoothly and securely</li>
+        <li>Understand what content is helpful (so we can make more of it)</li>
+        <li>Measure performance of pages and links</li>
+        <li>Support site maintenance through ads (if enabled)</li>
       </ul>
 
       <h2>Third-party links</h2>
       <p>
-        Relaxing Rosie may link to third-party websites such as YouTube or GitHub.
-        These sites have their own privacy policies, and this site is not responsible
-        for their practices.
+        This site may link to third-party platforms like YouTube or GitHub. Those platforms have
+        their own privacy policies, and their practices are not controlled by this website.
+      </p>
+
+      <h2>Your choices</h2>
+      <p>
+        You may be able to control cookies through your browser settings. You can also use tools
+        provided by Google to manage ad personalization if ads are enabled.
       </p>
 
       <h2>Contact</h2>
       <p>
-        If you have questions about this Privacy Policy, you can reach out through
-        the contact page.
+        If you have questions about this Privacy Policy, please reach out through the contact page:
+        <a href="contact.html">Contact</a>.
       </p>
 
+      <h2>Updates</h2>
       <p>
-        This policy may be updated occasionally. Changes will be reflected on this page.
+        This policy may be updated occasionally. The latest version will always be posted on this page.
       </p>
+
     </div>
   </div>
 </body>
 </html>
+```0
