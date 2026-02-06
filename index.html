@@ -1,149 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Relaxing Rosie</title>
+  <meta name="description" content="Calm spaces for cats. Gentle regulation for people." />
+
   <style>
     :root{
-      --bg: #fff3f7;
-      --card: rgba(255,255,255,0.85);
-      --text: #3b2f34;
-      --muted: #6a565e;
-      --accent: #f7c6d8;
-      --accent-2: #fbe0ea;
-      --border: rgba(59,47,52,0.10);
+      --bg1:#fff7fb;
+      --bg2:#fdeef7;
+      --card:#ffffffcc;
+      --text:#3b2f34;
+      --muted:#6b5b63;
+      --pink:#f7c7db;
+      --pink2:#ffe0ee;
+      --border:#f2c8d9;
       --shadow: 0 18px 40px rgba(59,47,52,0.10);
-      --radius: 22px;
+      --shadow2: 0 12px 28px rgba(59,47,52,0.08);
+      --radius:22px;
+      --radius2:18px;
+      --max:820px;
     }
 
-    *{ box-sizing: border-box; }
-
+    *{ box-sizing:border-box; }
     body{
-      margin: 0;
+      margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(900px 500px at 20% 10%, #ffe6ef 0%, transparent 55%),
-                  radial-gradient(900px 500px at 80% 0%, #ffeaf2 0%, transparent 60%),
-                  var(--bg);
-      color: var(--text);
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, var(--bg2), transparent 60%),
+        radial-gradient(900px 500px at 80% 10%, #ffe8f2, transparent 55%),
+        linear-gradient(180deg, var(--bg1), #fff);
+      padding: 22px 0 40px;
     }
 
     .wrap{
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 22px 18px 40px;
+      width:100%;
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 0 18px;
     }
 
     .hero{
-      background: rgba(255,255,255,0.55);
-      border: 1px solid var(--border);
+      width:100%;
       border-radius: var(--radius);
+      overflow:hidden;
       box-shadow: var(--shadow);
-      overflow: hidden;
+      background: #fff;
+      margin-bottom: 18px;
     }
-
     .hero img{
-      width: 100%;
-      height: auto;
-      display: block;
+      display:block;
+      width:100%;
+      height:auto;
     }
 
-    .content{
-      margin-top: 18px;
-      padding: 18px;
+    .card{
       background: var(--card);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(242,200,217,0.7);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
+      box-shadow: var(--shadow2);
+      padding: 22px 20px;
+      backdrop-filter: blur(8px);
     }
 
     h1{
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
       font-size: 40px;
       line-height: 1.05;
       letter-spacing: -0.5px;
     }
 
     .tagline{
-      margin: 0 0 16px 0;
-      font-size: 18px;
-      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.35;
+      margin: 0 0 14px;
+      color: var(--text);
       font-weight: 600;
     }
 
-    .blurb{
-      margin: 0 0 18px 0;
+    .intro{
+      margin: 0 0 18px;
       color: var(--muted);
-      font-size: 16px;
+      font-size: 16.5px;
       line-height: 1.65;
     }
 
-    .buttons{
-      display: grid;
-      gap: 10px;
-      margin: 12px 0 8px;
+    .btnRow{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 6px;
     }
 
     .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      padding: 14px 16px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 14px 18px;
       border-radius: 999px;
+      text-decoration:none;
       font-weight: 700;
+      font-size: 16px;
       border: 1px solid var(--border);
-      transition: transform 0.04s ease, filter 0.2s ease;
-      user-select: none;
+      transition: transform .08s ease, filter .15s ease;
+      user-select:none;
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .btnPrimary{
+      background: linear-gradient(180deg, var(--pink2), var(--pink));
+      color: var(--text);
+      box-shadow: 0 10px 18px rgba(247,199,219,0.45);
     }
 
-    .btn:active{ transform: scale(0.99); }
-
-    .btn.primary{
-      background: var(--accent);
+    .btnGhost{
+      background: #ffffffd6;
       color: var(--text);
     }
 
-    .btn.secondary{
-      background: #fff;
-      color: var(--text);
-      border: 1px solid rgba(247,198,216,0.9);
-      box-shadow: 0 10px 24px rgba(247,198,216,0.45);
+    .welcomeImage{
+      margin: 18px 0;
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      background:#fff;
+    }
+    .welcomeImage img{
+      display:block;
+      width:100%;
+      height:auto;
     }
 
     .section{
       margin-top: 18px;
-      padding: 18px;
-      background: rgba(255,255,255,0.72);
-      border: 1px solid var(--border);
+      background: var(--card);
+      border: 1px solid rgba(242,200,217,0.7);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow2);
+      padding: 18px 20px 16px;
+      backdrop-filter: blur(8px);
     }
 
     .section h2{
-      margin: 0 0 10px 0;
-      font-size: 18px;
-      letter-spacing: 0.2px;
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.2px;
     }
 
     ul{
       margin: 0;
-      padding-left: 18px;
+      padding-left: 20px;
       color: var(--muted);
       line-height: 1.7;
+      font-size: 16.5px;
     }
 
-    .note{
-      margin-top: 14px;
-      color: rgba(106,86,94,0.9);
-      font-size: 14px;
-    }
-
-    footer{
-      margin-top: 16px;
-      text-align: center;
-      color: rgba(106,86,94,0.75);
+    .footer{
+      text-align:center;
+      margin-top: 18px;
+      color: rgba(59,47,52,0.55);
       font-size: 13px;
     }
   </style>
@@ -152,28 +169,40 @@
 <body>
   <div class="wrap">
 
+    <!-- HERO HEADER IMAGE -->
     <div class="hero">
-      <img src="hero_20260206_005142_0000.jpg" alt="Cozy calm cats header">
+      <img src="hero_20260206_005142_0000.jpg" alt="Cozy calm cats" />
     </div>
 
-    <div class="content">
+    <!-- MAIN INTRO CARD -->
+    <div class="card">
       <h1>Relaxing Rosie</h1>
 
       <p class="tagline">Calm spaces for cats. Gentle regulation for people.</p>
 
-      <p class="blurb">
+      <p class="intro">
         Welcome. This is the official home of the Relaxing Rosie YouTube channel.
-        We share real world cat enrichment builds, multi cat household observations, and peaceful routines that support a calmer home.
+        We share real world cat enrichment builds, multi cat household observations,
+        and peaceful routines that support a calmer home.
       </p>
 
-      <div class="buttons">
-        <a class="btn primary" href="https://www.youtube.com/@relaxingrosiecat" target="_blank" rel="noopener">Visit the YouTube channel</a>
-        <a class="btn secondary" href="articles.html">What we’ve learned</a>
-      </div>
+      <div class="btnRow">
+        <a class="btn btnPrimary" href="https://www.youtube.com/@relaxingrosiecat" target="_blank" rel="noopener">
+          Visit the YouTube channel
+        </a>
 
-      <p class="note">This space will grow slowly and intentionally.</p>
+        <a class="btn btnGhost" href="articles.html">
+          What we’ve learned
+        </a>
+      </div>
     </div>
 
+    <!-- SECONDARY IMAGE (THE ONE YOU ADDED) -->
+    <div class="welcomeImage">
+      <img src="Were-glad-youre-here_20260206_014519_0000.jpg" alt="We are glad you are here" />
+    </div>
+
+    <!-- WHAT WE SHARE -->
     <div class="section">
       <h2>What we share</h2>
       <ul>
@@ -183,9 +212,7 @@
       </ul>
     </div>
 
-    <footer>
-      © Relaxing Rosie
-    </footer>
+    <div class="footer">© Relaxing Rosie</div>
 
   </div>
 </body>
