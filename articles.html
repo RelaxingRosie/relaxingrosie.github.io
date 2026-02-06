@@ -3,146 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title>Articles | Relaxing Rosie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    :root{
-      --bg: #fff4f9;
-      --ink: #2b2328;
-      --muted: #6f636b;
-      --rose: #ff7fb8;
-      --border: rgba(43,35,40,0.10);
-      --panel: rgba(255,255,255,0.90);
-    }
-
-    *{ box-sizing: border-box; }
-
-    body{
+    body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 700px at 20% 10%, rgba(255,127,184,0.18), transparent 60%),
-        radial-gradient(900px 700px at 80% 25%, rgba(255,217,234,0.55), transparent 55%),
-        var(--bg);
-      color: var(--ink);
-      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff5f8;
+      color: #4a3b3b;
+      line-height: 1.7;
     }
 
-    main{
+    .container {
       max-width: 720px;
-      margin: 0 auto;
-      padding: 70px 22px 90px;
+      margin: auto;
+      padding: 24px;
     }
 
-    h1{
-      margin: 0 0 14px;
-      font-size: 2.6rem;
-      text-align: center;
-      letter-spacing: -0.02em;
+    h1 {
+      font-size: 28px;
+      margin-bottom: 12px;
     }
 
-    .intro{
-      max-width: 620px;
-      margin: 0 auto 34px;
-      font-size: 1.25rem;
-      line-height: 1.8;
-      text-align: center;
-      color: var(--muted);
+    .intro {
+      font-size: 16px;
+      color: #6f565c;
+      margin-bottom: 32px;
     }
 
-    .back{
-      text-align: center;
-      margin-bottom: 36px;
+    .article {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
     }
 
-    .back a{
-      font-size: 1.1rem;
-      color: var(--muted);
+    .article h2 {
+      font-size: 20px;
+      margin: 0 0 8px 0;
+    }
+
+    .article p {
+      margin: 0 0 12px 0;
+      color: #6f565c;
+    }
+
+    .article a {
+      color: #c56a86;
       text-decoration: none;
-      border-bottom: 2px solid rgba(255,127,184,0.35);
-      padding-bottom: 3px;
-    }
-
-    .list{
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 10px;
-    }
-
-    .item{
-      padding: 22px 18px;
-    }
-
-    .item + .item{
-      border-top: 1px solid var(--border);
-    }
-
-    .title{
-      font-size: 1.4rem;
       font-weight: 600;
-      margin-bottom: 10px;
     }
 
-    .title a{
-      color: var(--ink);
+    .article a:hover {
+      text-decoration: underline;
+    }
+
+    .back {
+      margin-top: 40px;
+    }
+
+    .back a {
+      color: #c56a86;
       text-decoration: none;
+      font-weight: 600;
     }
 
-    .desc{
-      font-size: 1.15rem;
-      line-height: 1.75;
-      color: var(--muted);
-    }
-
-    footer{
-      margin-top: 50px;
-      text-align: center;
-      font-size: 1rem;
-      color: var(--muted);
-    }
-
-    @media (min-width: 768px){
-      h1{ font-size: 3rem; }
-      .intro{ font-size: 1.3rem; }
-      .title{ font-size: 1.55rem; }
-      .desc{ font-size: 1.2rem; }
+    .back a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-  <main>
+  <div class="container">
 
     <h1>Articles</h1>
-
     <p class="intro">
-      Calm writing on cat enrichment, multi-cat homes, and gentle nervous system
-      regulation. This space grows slowly and intentionally.
+      These articles expand on the ideas behind our videos — 
+      why certain builds exist, how the cats respond, and how calm environments 
+      support regulation in real life.
     </p>
 
+    <!-- ARTICLE: TUBELOX SHOW BUILD -->
+    <div class="article">
+      <h2>The Tubelox Show Build</h2>
+      <p>
+        Why I built this Tubelox structure the way I did, 
+        what I was watching for, and how the cats chose to use it.
+      </p>
+      <a href="tubelox-show-build.html">Read article →</a>
+    </div>
+
+    <!-- PLACEHOLDER FOR FUTURE ARTICLES -->
+    <!--
+    <div class="article">
+      <h2>Future Article Title</h2>
+      <p>Short description of the article.</p>
+      <a href="#">Read article →</a>
+    </div>
+    -->
+
     <div class="back">
-      <a href="/">← Back to home</a>
+      <a href="index.html">← Back to home</a>
     </div>
 
-    <div class="list">
-
-      <div class="item">
-        <div class="title">
-          <a href="/tubelox.html">What We Learned Building a Tubelox Structure</a>
-        </div>
-        <div class="desc">
-          Real-life observations from building and living with a Tubelox modular
-          structure in a multi-cat home, focusing on choice, safety, and calm.
-        </div>
-      </div>
-
-    </div>
-
-    <footer>
-      💗 Thank you for reading at your own pace.
-    </footer>
-
-  </main>
+  </div>
 </body>
 </html>
