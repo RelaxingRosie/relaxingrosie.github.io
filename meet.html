@@ -12,8 +12,6 @@
       --card:#fffafc;
       --text:#3b2f33;
       --muted:#6b555d;
-      --pink:#f7c7d6;
-      --pink2:#ffdbe6;
       --border:#f1c6d4;
       --shadow: 0 18px 50px rgba(73, 32, 45, 0.10);
       --shadow2: 0 10px 24px rgba(73, 32, 45, 0.08);
@@ -23,16 +21,16 @@
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at 30% 0%, rgba(255, 255, 255, 0.9), rgba(255,255,255,0) 55%),
+        radial-gradient(1200px 600px at 30% 0%, rgba(255,255,255,0.9), rgba(255,255,255,0) 55%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
       min-height:100vh;
     }
 
     .wrap{
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 18px 18px 44px;
     }
@@ -57,11 +55,6 @@
       text-decoration:none;
       font-weight: 650;
       box-shadow: var(--shadow2);
-      transition: transform 120ms ease, box-shadow 120ms ease;
-    }
-    .pill:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(73, 32, 45, 0.10);
     }
 
     .hero{
@@ -85,6 +78,7 @@
       color: var(--muted);
       font-size: 16.5px;
       line-height: 1.6;
+      max-width: 70ch;
     }
 
     .grid{
@@ -93,7 +87,7 @@
       gap: 14px;
     }
 
-    .card{
+    .cat{
       display:block;
       text-decoration:none;
       background: var(--card);
@@ -101,10 +95,11 @@
       border-radius: var(--radius);
       overflow:hidden;
       box-shadow: var(--shadow2);
-      transition: transform 120ms ease, box-shadow 120ms ease;
       color: var(--text);
+      transition: transform 120ms ease, box-shadow 120ms ease;
     }
-    .card:hover{
+
+    .cat:hover{
       transform: translateY(-2px);
       box-shadow: 0 18px 40px rgba(73, 32, 45, 0.12);
     }
@@ -113,11 +108,9 @@
       width:100%;
       aspect-ratio: 4 / 3;
       background: rgba(247, 199, 214, 0.25);
-      display:flex;
-      align-items:center;
-      justify-content:center;
       overflow:hidden;
     }
+
     .photo img{
       width:100%;
       height:100%;
@@ -127,20 +120,14 @@
 
     .info{
       padding: 12px 14px 14px;
+      text-align: center;
     }
 
     .name{
       font-size: 18px;
       font-weight: 800;
-      margin: 0 0 6px;
-      letter-spacing: -0.2px;
-    }
-
-    .hint{
       margin: 0;
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.5;
+      letter-spacing: -0.2px;
     }
 
     footer{
@@ -150,7 +137,7 @@
       color: rgba(107, 85, 93, 0.85);
     }
 
-    @media (max-width: 860px){
+    @media (max-width: 900px){
       .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media (max-width: 520px){
@@ -171,174 +158,32 @@
 
     <div class="hero">
       <h1>Meet the Cats</h1>
-      <p class="sub">
-        Click a cat to read their story. This page will grow slowly and intentionally.
-      </p>
+      <p class="sub">Click a cat to read their story.</p>
     </div>
 
     <div class="grid">
-
-      <!-- HOW TO USE:
-           1) Put each cat photo in a folder named "cats"
-           2) Example filename: cats/rosie.jpg
-           3) Make the story page: rosie.html
-      -->
-
-      <a class="card" href="rosie.html">
-        <div class="photo"><img src="cats/rosie.jpg" alt="Rosie"></div>
-        <div class="info">
-          <div class="name">Rosie</div>
-          <p class="hint">Dream guardian energy, cozy routines, gentle comfort.</p>
-        </div>
-      </a>
-
-      <a class="card" href="knox.html">
-        <div class="photo"><img src="cats/knox.jpg" alt="Knox"></div>
-        <div class="info">
-          <div class="name">Knox</div>
-          <p class="hint">A wise presence, calm strength, soft curiosity.</p>
-        </div>
-      </a>
-
-      <a class="card" href="ellie.html">
-        <div class="photo"><img src="cats/ellie.jpg" alt="Ellie"></div>
-        <div class="info">
-          <div class="name">Ellie</div>
-          <p class="hint">Tender, observant, and quietly brave.</p>
-        </div>
-      </a>
-
-      <a class="card" href="suga.html">
-        <div class="photo"><img src="cats/suga.jpg" alt="Suga"></div>
-        <div class="info">
-          <div class="name">Suga</div>
-          <p class="hint">Sweet, steady, and full of soft charm.</p>
-        </div>
-      </a>
-
-      <a class="card" href="vivian.html">
-        <div class="photo"><img src="cats/vivian.jpg" alt="Vivian"></div>
-        <div class="info">
-          <div class="name">Vivian</div>
-          <p class="hint">Bright eyes, gentle confidence, cozy companion.</p>
-        </div>
-      </a>
-
-      <a class="card" href="raps.html">
-        <div class="photo"><img src="cats/raps.jpg" alt="Raps"></div>
-        <div class="info">
-          <div class="name">Raps</div>
-          <p class="hint">Curious, expressive, and full of personality.</p>
-        </div>
-      </a>
-
-      <a class="card" href="hiccup.html">
-        <div class="photo"><img src="cats/hiccup.jpg" alt="Hiccup"></div>
-        <div class="info">
-          <div class="name">Hiccup</div>
-          <p class="hint">A tender soul learning comfort and care.</p>
-        </div>
-      </a>
-
-      <a class="card" href="frankie.html">
-        <div class="photo"><img src="cats/frankie.jpg" alt="Frankie"></div>
-        <div class="info">
-          <div class="name">Frankie</div>
-          <p class="hint">Spicy sparkle, loving heart, strong opinions.</p>
-        </div>
-      </a>
-
-      <a class="card" href="anna.html">
-        <div class="photo"><img src="cats/anna.jpg" alt="Anna"></div>
-        <div class="info">
-          <div class="name">Anna</div>
-          <p class="hint">Calm, cautious, and happiest with quiet space.</p>
-        </div>
-      </a>
-
-      <a class="card" href="lightning-mcqueen.html">
-        <div class="photo"><img src="cats/lightning-mcqueen.jpg" alt="Lightning McQueen"></div>
-        <div class="info">
-          <div class="name">Lightning McQueen</div>
-          <p class="hint">Big energy, big feelings, big love.</p>
-        </div>
-      </a>
-
-      <a class="card" href="eugene.html">
-        <div class="photo"><img src="cats/eugene.jpg" alt="Eugene"></div>
-        <div class="info">
-          <div class="name">Eugene</div>
-          <p class="hint">Soft fluff, gentle presence, cozy friend.</p>
-        </div>
-      </a>
-
-      <a class="card" href="harry.html">
-        <div class="photo"><img src="cats/harry.jpg" alt="Harry"></div>
-        <div class="info">
-          <div class="name">Harry</div>
-          <p class="hint">Adventurous, curious, and always exploring.</p>
-        </div>
-      </a>
-
-      <a class="card" href="simba.html">
-        <div class="photo"><img src="cats/simba.jpg" alt="Simba"></div>
-        <div class="info">
-          <div class="name">Simba</div>
-          <p class="hint">Playful leader energy with a sweet side.</p>
-        </div>
-      </a>
-
-      <a class="card" href="ginny.html">
-        <div class="photo"><img src="cats/ginny.jpg" alt="Ginny"></div>
-        <div class="info">
-          <div class="name">Ginny</div>
-          <p class="hint">Cuddle queen who loves everyone.</p>
-        </div>
-      </a>
-
-      <a class="card" href="lavender.html">
-        <div class="photo"><img src="cats/lavender.jpg" alt="Lavender"></div>
-        <div class="info">
-          <div class="name">Lavender</div>
-          <p class="hint">Soft, sweet, and quietly magical.</p>
-        </div>
-      </a>
-
-      <a class="card" href="luna.html">
-        <div class="photo"><img src="cats/luna.jpg" alt="Luna"></div>
-        <div class="info">
-          <div class="name">Luna</div>
-          <p class="hint">Gentle mystery with a calm glow.</p>
-        </div>
-      </a>
-
-      <a class="card" href="mater.html">
-        <div class="photo"><img src="cats/mater.jpg" alt="Mater"></div>
-        <div class="info">
-          <div class="name">Mater</div>
-          <p class="hint">Steady, curious, and always nearby.</p>
-        </div>
-      </a>
-
-      <a class="card" href="astrid.html">
-        <div class="photo"><img src="cats/astrid.jpg" alt="Astrid"></div>
-        <div class="info">
-          <div class="name">Astrid</div>
-          <p class="hint">Sweet and sneaky, a tiny shadow ninja.</p>
-        </div>
-      </a>
-
-      <a class="card" href="jim.html">
-        <div class="photo"><img src="cats/jim.jpg" alt="Jim"></div>
-        <div class="info">
-          <div class="name">Jim</div>
-          <p class="hint">Part of the crew, and loved deeply.</p>
-        </div>
-      </a>
-
+      <a class="cat" href="rosie.html"><div class="photo"><img src="Rosie.jpg" alt="Rosie"></div><div class="info"><p class="name">Rosie</p></div></a>
+      <a class="cat" href="knox.html"><div class="photo"><img src="knox.jpg" alt="Knox"></div><div class="info"><p class="name">Knox</p></div></a>
+      <a class="cat" href="jim.html"><div class="photo"><img src="jim.jpg" alt="Jim"></div><div class="info"><p class="name">Jim</p></div></a>
+      <a class="cat" href="suga.html"><div class="photo"><img src="suga.png" alt="Suga"></div><div class="info"><p class="name">Suga</p></div></a>
+      <a class="cat" href="vivian.html"><div class="photo"><img src="vivian.jpg" alt="Vivian"></div><div class="info"><p class="name">Vivian</p></div></a>
+      <a class="cat" href="ellie.html"><div class="photo"><img src="ellie.jpg" alt="Ellie"></div><div class="info"><p class="name">Ellie</p></div></a>
+      <a class="cat" href="hiccup.html"><div class="photo"><img src="hiccup.jpg" alt="Hiccup"></div><div class="info"><p class="name">Hiccup</p></div></a>
+      <a class="cat" href="raps.html"><div class="photo"><img src="raps.jpg" alt="Raps"></div><div class="info"><p class="name">Raps</p></div></a>
+      <a class="cat" href="mammafrankie.html"><div class="photo"><img src="mammafrankie.jpg" alt="Momma Frankie"></div><div class="info"><p class="name">Momma Frankie</p></div></a>
+      <a class="cat" href="mcqueen.html"><div class="photo"><img src="mcqueen.jpg" alt="McQueen"></div><div class="info"><p class="name">McQueen</p></div></a>
+      <a class="cat" href="eugene.html"><div class="photo"><img src="eugene.jpg" alt="Eugene"></div><div class="info"><p class="name">Eugene</p></div></a>
+      <a class="cat" href="anna.html"><div class="photo"><img src="anna.jpg" alt="Anna"></div><div class="info"><p class="name">Anna</p></div></a>
+      <a class="cat" href="harry.html"><div class="photo"><img src="harry.jpg" alt="Harry"></div><div class="info"><p class="name">Harry</p></div></a>
+      <a class="cat" href="simba.html"><div class="photo"><img src="simba.jpg" alt="Simba"></div><div class="info"><p class="name">Simba</p></div></a>
+      <a class="cat" href="ginny.html"><div class="photo"><img src="ginny.jpg" alt="Ginny"></div><div class="info"><p class="name">Ginny</p></div></a>
+      <a class="cat" href="lavi.html"><div class="photo"><img src="lavi.jpg" alt="Lavi"></div><div class="info"><p class="name">Lavi</p></div></a>
+      <a class="cat" href="mater.html"><div class="photo"><img src="mater.jpg" alt="Mater"></div><div class="info"><p class="name">Mater</p></div></a>
+      <a class="cat" href="astrid.html"><div class="photo"><img src="astrid.jpg" alt="Astrid"></div><div class="info"><p class="name">Astrid</p></div></a>
+      <a class="cat" href="luna.html"><div class="photo"><img src="luna.jpg" alt="Luna"></div><div class="info"><p class="name">Luna</p></div></a>
     </div>
 
     <footer>© Relaxing Rosie</footer>
   </div>
 </body>
-</html>
+  </html>
