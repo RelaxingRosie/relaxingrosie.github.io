@@ -1,54 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Relaxing Rosie</title>
-  <meta name="description" content="Calm spaces for cats. Gentle regulation for people." />
-
   <style>
     :root{
-      --bg1:#fff7fb;
-      --bg2:#fdeef7;
-      --card:#ffffffcc;
-      --text:#3b2f34;
-      --muted:#6b5b63;
-      --pink:#f7c7db;
-      --pink2:#ffe0ee;
-      --border:#f2c8d9;
-      --shadow: 0 18px 40px rgba(59,47,52,0.10);
-      --shadow2: 0 12px 28px rgba(59,47,52,0.08);
-      --radius:22px;
-      --radius2:18px;
-      --max:820px;
+      --bg1:#fde9ef;
+      --bg2:#fff4f7;
+      --card:#fffafc;
+      --text:#3b2f33;
+      --muted:#6b555d;
+      --pink:#f7c7d6;
+      --pink2:#ffdbe6;
+      --border:#f1c6d4;
+      --shadow: 0 18px 50px rgba(73, 32, 45, 0.10);
+      --shadow2: 0 10px 24px rgba(73, 32, 45, 0.08);
+      --radius: 22px;
     }
 
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       color:var(--text);
       background:
-        radial-gradient(900px 500px at 20% 0%, var(--bg2), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, #ffe8f2, transparent 55%),
-        linear-gradient(180deg, var(--bg1), #fff);
-      padding: 22px 0 40px;
+        radial-gradient(1200px 600px at 30% 0%, rgba(255, 255, 255, 0.9), rgba(255,255,255,0) 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
     }
 
     .wrap{
-      width:100%;
-      max-width: var(--max);
-      margin:0 auto;
-      padding: 0 18px;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 18px 18px 40px;
     }
 
     .hero{
       width:100%;
       border-radius: var(--radius);
       overflow:hidden;
-      box-shadow: var(--shadow);
-      background: #fff;
-      margin-bottom: 18px;
+      box-shadow: var(--shadow2);
+      background: rgba(255,255,255,0.5);
+      border: 1px solid rgba(241, 198, 212, 0.65);
     }
     .hero img{
       display:block;
@@ -57,163 +51,43 @@
     }
 
     .card{
+      margin-top: 16px;
       background: var(--card);
-      border: 1px solid rgba(242,200,217,0.7);
+      border: 1px solid rgba(241, 198, 212, 0.70);
       border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 22px 20px;
-      backdrop-filter: blur(8px);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
     }
 
     h1{
-      margin: 0 0 10px;
-      font-size: 40px;
+      font-size: 44px;
       line-height: 1.05;
+      margin: 6px 0 10px;
       letter-spacing: -0.5px;
     }
 
     .tagline{
       font-size: 20px;
-      line-height: 1.35;
+      font-weight: 650;
       margin: 0 0 14px;
-      color: var(--text);
-      font-weight: 600;
+      color: var(--muted);
     }
 
-    .intro{
-      margin: 0 0 18px;
-      color: var(--muted);
+    p{
+      margin: 0 0 16px;
       font-size: 16.5px;
-      line-height: 1.65;
+      line-height: 1.6;
+      color: var(--muted);
     }
 
     .btnRow{
       display:flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-top: 6px;
+      margin-top: 10px;
     }
 
     .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 14px 18px;
-      border-radius: 999px;
-      text-decoration:none;
-      font-weight: 700;
-      font-size: 16px;
+      appearance:none;
       border: 1px solid var(--border);
-      transition: transform .08s ease, filter .15s ease;
-      user-select:none;
-    }
-    .btn:active{ transform: translateY(1px); }
-
-    .btnPrimary{
-      background: linear-gradient(180deg, var(--pink2), var(--pink));
-      color: var(--text);
-      box-shadow: 0 10px 18px rgba(247,199,219,0.45);
-    }
-
-    .btnGhost{
-      background: #ffffffd6;
-      color: var(--text);
-    }
-
-    .welcomeImage{
-      margin: 18px 0;
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow2);
-      background:#fff;
-    }
-    .welcomeImage img{
-      display:block;
-      width:100%;
-      height:auto;
-    }
-
-    .section{
-      margin-top: 18px;
-      background: var(--card);
-      border: 1px solid rgba(242,200,217,0.7);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow2);
-      padding: 18px 20px 16px;
-      backdrop-filter: blur(8px);
-    }
-
-    .section h2{
-      margin: 0 0 10px;
-      font-size: 22px;
-      letter-spacing: -0.2px;
-    }
-
-    ul{
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 16.5px;
-    }
-
-    .footer{
-      text-align:center;
-      margin-top: 18px;
-      color: rgba(59,47,52,0.55);
-      font-size: 13px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-
-    <!-- HERO HEADER IMAGE -->
-    <div class="hero">
-      <img src="hero_20260206_005142_0000.jpg" alt="Cozy calm cats" />
-    </div>
-
-    <!-- MAIN INTRO CARD -->
-    <div class="card">
-      <h1>Relaxing Rosie</h1>
-
-      <p class="tagline">Calm spaces for cats. Gentle regulation for people.</p>
-
-      <p class="intro">
-        Welcome. This is the official home of the Relaxing Rosie YouTube channel.
-        We share real world cat enrichment builds, multi cat household observations,
-        and peaceful routines that support a calmer home.
-      </p>
-
-      <div class="btnRow">
-        <a class="btn btnPrimary" href="https://www.youtube.com/@relaxingrosiecat" target="_blank" rel="noopener">
-          Visit the YouTube channel
-        </a>
-
-        <a class="btn btnGhost" href="articles.html">
-          What we’ve learned
-        </a>
-      </div>
-    </div>
-
-    <!-- SECONDARY IMAGE (THE ONE YOU ADDED) -->
-    <div class="welcomeImage">
-      <img src="Were-glad-youre-here_20260206_014519_0000.jpg" alt="We are glad you are here" />
-    </div>
-
-    <!-- WHAT WE SHARE -->
-    <div class="section">
-      <h2>What we share</h2>
-      <ul>
-        <li>Calm, real life cat enrichment builds</li>
-        <li>Multi cat household observations</li>
-        <li>Gentle nervous system support through routine and care</li>
-      </ul>
-    </div>
-
-    <div class="footer">© Relaxing Rosie</div>
-
-  </div>
-</body>
-</html>
+      border-radius: 999px;
