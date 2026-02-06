@@ -134,17 +134,29 @@
       </a>
     </div>
 
-    .welcome-image {
-  max-width: 720px;   /* same visual width as header text */
-  margin: 24px auto;
-  text-align: center;
-}
+<div class="welcome-image">
+  <img
+    src="Were-glad-youre-here_20260206_014519_0000.jpg"
+    alt="We’re glad you’re here"
+    loading="lazy"
+  />
+</div>
 
-.welcome-image img {
-  width: 100%;
-  border-radius: 16px;
-  opacity: 0.95;
-}
+<!-- Paste this EXACT CSS inside your <style> section -->
+<style>
+  .welcome-image{
+    max-width:720px;
+    margin:24px auto;
+    padding:0 16px;
+  }
+  .welcome-image img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:18px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.08);
+  }
+</style>
 </div>
     
     <!-- WHAT YOU SHARE -->
