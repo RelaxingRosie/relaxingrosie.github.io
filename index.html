@@ -1,250 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Relaxing Rosie | Calm Spaces for Cats</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official home for the Relaxing Rosie YouTube channel, sharing calm cat enrichment builds and gentle nervous system regulation through observation, routine, and care." />
+  <meta charset="UTF-8">
+  <title>Relaxing Rosie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Relaxing Rosie is a calm YouTube channel and home base for gentle cat enrichment and nervous system regulation." />
 
   <style>
     :root{
-      --bg: #fff2f8;          /* blush background */
-      --panel: rgba(255,255,255,0.86);
-      --panel2: rgba(255,255,255,0.92);
+      --bg: #fff4f9;
       --ink: #2b2328;
-      --muted: #6b5f67;
-
-      --blush: #ffb7d4;       /* soft blush */
-      --rose: #ff6fae;        /* accent rose */
-      --sage: #8fb5ad;        /* gentle sage */
-
-      --shadow: 0 16px 40px rgba(24, 12, 18, 0.10);
-      --shadowSoft: 0 10px 26px rgba(24, 12, 18, 0.08);
-      --border: rgba(24, 12, 18, 0.08);
-
-      --radius: 24px;
-      --radiusSm: 18px;
+      --muted: #6f636b;
+      --blush: #ffd9ea;
+      --rose: #ff7fb8;
+      --border: rgba(43,35,40,0.08);
     }
 
     *{ box-sizing: border-box; }
 
     body{
-      margin:0;
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--ink);
-      line-height: 1.65;
       background:
-        radial-gradient(900px 650px at 18% 6%, rgba(255,111,174,0.20), transparent 60%),
-        radial-gradient(860px 620px at 82% 12%, rgba(255,183,212,0.30), transparent 58%),
-        radial-gradient(820px 620px at 60% 90%, rgba(143,181,173,0.14), transparent 55%),
+        radial-gradient(800px 600px at 20% 10%, rgba(255,127,184,0.20), transparent 60%),
+        radial-gradient(900px 650px at 80% 25%, rgba(255,217,234,0.55), transparent 55%),
         var(--bg);
       min-height: 100vh;
     }
 
-    .wrap{
-      max-width: 880px;
+    main{
+      max-width: 720px;
       margin: 0 auto;
-      padding: 18px 14px 60px;
-    }
-
-    .header{
-      position: relative;
-      padding: 18px 16px 18px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, rgba(255,183,212,0.35), rgba(255,255,255,0.80));
-      border: 1px solid rgba(255,111,174,0.10);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .header:before{
-      content:"";
-      position:absolute;
-      inset:-60px -60px auto auto;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,111,174,0.25), transparent 60%);
-      filter: blur(2px);
-      transform: rotate(10deg);
-    }
-
-    .badge{
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,111,174,0.12);
-      border: 1px solid rgba(255,111,174,0.14);
-      color: var(--muted);
-      font-size: 0.98rem;
-      max-width: 100%;
-    }
-
-    .dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--rose);
-      box-shadow: 0 0 0 6px rgba(255,111,174,0.16);
-      flex: 0 0 auto;
+      padding: 90px 20px 80px;
+      text-align: center;
     }
 
     h1{
-      margin: 14px 0 8px;
-      font-size: 2.25rem;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .sub{
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.03rem;
-    }
-
-    .grid{
-      display: grid;
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .card{
-      background: var(--panel2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadowSoft);
-      padding: 16px;
-      overflow: hidden;
-    }
-
-    h2{
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-      letter-spacing: -0.01em;
-    }
-
-    .tiny{
       margin: 0 0 12px;
+      font-size: 2.6rem;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+    }
+
+    .tagline{
+      display: inline-block;
+      margin-bottom: 26px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,127,184,0.12);
+      border: 1px solid rgba(255,127,184,0.18);
       color: var(--muted);
-      font-size: 0.98rem;
+      font-size: 1rem;
     }
 
-    .btnRow{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
+    p{
+      margin: 0 auto 22px;
+      max-width: 520px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(255,183,212,0.28), rgba(255,255,255,0.96));
-      border: 1px solid rgba(255,111,174,0.20);
-      box-shadow: 0 10px 22px rgba(255,111,174,0.10);
-      color: var(--ink);
-      font-weight: 700;
+    a.button{
+      display: inline-block;
+      margin-top: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--rose);
+      color: #fff;
       text-decoration: none;
+      font-weight: 600;
       letter-spacing: 0.2px;
     }
 
-    .btn:hover{
-      filter: brightness(0.98);
-      text-decoration: none;
+    a.button:hover{
+      opacity: 0.95;
     }
 
-    .btn.secondary{
-      background: linear-gradient(180deg, rgba(143,181,173,0.22), rgba(255,255,255,0.96));
-      border: 1px solid rgba(143,181,173,0.26);
-      box-shadow: 0 10px 22px rgba(143,181,173,0.10);
-    }
-
-    ul{
-      margin: 0;
-      padding-left: 18px;
+    footer{
+      margin-top: 60px;
+      font-size: 0.9rem;
       color: var(--muted);
-    }
-
-    li{ margin: 8px 0; }
-
-    .footer{
-      margin-top: 16px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.95rem;
-      padding: 8px 0 0;
-    }
-
-    .footer span{
-      display:inline-block;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,111,174,0.08);
-      border: 1px solid rgba(255,111,174,0.10);
-    }
-
-    @media (min-width: 780px){
-      .wrap{ padding: 24px 18px 70px; }
-      .header{ padding: 22px 20px 20px; }
-      h1{ font-size: 2.7rem; }
-      .grid{ grid-template-columns: 1.1fr 0.9fr; align-items: start; }
-      .card{ padding: 18px 18px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+  <main>
+    <h1>Relaxing Rosie</h1>
 
-    <section class="header">
-      <div class="badge"><span class="dot"></span> Calm spaces for cats, gentle regulation for people</div>
-      <h1>Relaxing Rosie</h1>
-      <p class="sub">
-        This is the official home of the <strong>Relaxing Rosie</strong> YouTube channel, focused on calm cat enrichment builds,
-        real-life observation, and peaceful routines that support a regulated home.
-      </p>
-    </section>
-
-    <div class="grid">
-      <section class="card">
-        <h2>Watch on YouTube</h2>
-        <p class="tiny">
-          If you’re new here, start with our latest calm build and let the cats show you what they choose.
-        </p>
-
-        <div class="btnRow">
-          <a class="btn" href="https://www.youtube.com/@relaxingrosiecat" target="_blank" rel="noopener">
-            ▶️ Visit the YouTube channel
-          </a>
-
-          <a class="btn secondary" href="https://www.youtube.com/@relaxingrosiecat/videos" target="_blank" rel="noopener">
-            🐾 Browse videos
-          </a>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>What We Share</h2>
-        <ul>
-          <li>Calm, real-world cat enrichment builds</li>
-          <li>Multi-cat household observations</li>
-          <li>Gentle nervous system regulation through routine and care</li>
-        </ul>
-
-        <p class="tiny" style="margin-top:12px;">
-          This space will grow slowly and intentionally.
-        </p>
-      </section>
+    <div class="tagline">
+      Calm spaces for cats, gentle regulation for people
     </div>
 
-    <div class="footer">
-      <span>💗 Thank you for being here, take your time.</span>
-    </div>
+    <p>
+      Relaxing Rosie is the home of a calm YouTube channel focused on cat enrichment,
+      real-life observation, and creating peaceful routines that support both animals
+      and the nervous system.
+    </p>
 
-  </div>
+    <p>
+      This space exists to grow slowly, intentionally, and with care.
+    </p>
+
+    <a class="button" href="https://www.youtube.com/@relaxingrosiecat" target="_blank" rel="noopener">
+      Watch on YouTube
+    </a>
+
+    <footer>
+      💗 Thank you for being here.
+    </footer>
+  </main>
 </body>
 </html>
